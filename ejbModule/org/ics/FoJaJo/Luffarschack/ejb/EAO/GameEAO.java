@@ -5,7 +5,6 @@ import javax.ejb.Stateless;
 /**
  * Session Bean implementation class GameEAO
  */
-
 @Stateless
 public class GameEAO implements GameEAOLocal {
 
