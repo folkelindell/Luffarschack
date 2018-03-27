@@ -7,6 +7,12 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+	@NamedQuery(name="Game.findAll",
+			query="SELECT g FROM Game g"),
+	@NamedQuery(name="Game.findAllOpenGames",
+	query="SELECT g FROM Game g WHERE g.gameStatus = 'WAITING_FOR_PLAYER'")
+})
 @Table(name = "Game")
 @SequenceGenerator(name = "ID_SEQ", allocationSize = 1)
 public class Game implements Serializable {
