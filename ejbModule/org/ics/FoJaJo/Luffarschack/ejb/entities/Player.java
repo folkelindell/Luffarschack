@@ -6,6 +6,11 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+	@NamedQuery(name="Player.getTopPlayers", 
+			query="SELECT c FROM Player c ORDER BY c.rating DESC")
+})
+
 @Table(name = "Player")
 public class Player implements Serializable {
 	private static final long serialVersionUID = 1L;
