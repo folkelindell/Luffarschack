@@ -6,6 +6,8 @@ import java.sql.Timestamp;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({ @NamedQuery(name = "Move.findAllMovesInGame", query = "SELECT m FROM Move m WHERE m.game=:game"),
+		@NamedQuery(name = "Move.findAllMovesInGameByPlayer", query = "SELECT m FROM Move m WHERE m.game=:game AND m.player=:player"), })
 @Table(name = "Move")
 @SequenceGenerator(name = "ID_SEQ", allocationSize = 1)
 public class Move implements Serializable {

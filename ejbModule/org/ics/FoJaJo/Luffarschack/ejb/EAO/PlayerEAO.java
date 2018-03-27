@@ -1,7 +1,6 @@
 package org.ics.FoJaJo.Luffarschack.ejb.EAO;
 
 import java.util.List;
-import java.util.Set;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
