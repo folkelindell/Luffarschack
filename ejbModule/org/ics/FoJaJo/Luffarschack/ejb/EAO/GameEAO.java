@@ -44,7 +44,6 @@ public class GameEAO implements GameEAOLocal {
 		TypedQuery<Game> tq = em.createNamedQuery("Game.findAllOpenGames", Game.class);
 		return tq.getResultList();
 	}
-	
 
 	/**
 	 * Default constructor.
@@ -52,5 +51,7 @@ public class GameEAO implements GameEAOLocal {
 	public GameEAO() {
 		// TODO Auto-generated constructor stub
 	}
+
+	
 
 }
